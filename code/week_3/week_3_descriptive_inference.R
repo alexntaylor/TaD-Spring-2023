@@ -110,7 +110,7 @@ iconv("ã", from = "UTF-8", to = "ASCII")
 # 0.4 <= b <= 0.6
 
 # 2.1 Example using data from the corpus of inaugural speeches
-tokens <- tokens(data_corpus_inaugural, remove_punct = TRUE) 
+tokens <- tokens(data_corpus_inaugural, remove_punct = TRUE)
 num_tokens <- sum(lengths(tokens))
 
 inaug_dfm <- dfm(data_corpus_inaugural)
