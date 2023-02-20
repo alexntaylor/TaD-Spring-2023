@@ -4,7 +4,7 @@
 # Last Updated: 2-12-2022
 # Lab adapted from: Lucia Motolinia, Kevin Munger, Patrick Chester,
 # Leslie Huang, Pedro L. Rodriguez, and Lucia Motolinia.
-
+#install.packages("stylo")
 library(tidyverse)
 library(stylo)
 library(gutenbergr)
@@ -182,7 +182,7 @@ stylo(frequencies = culled.freqs, analysis.type = "PCR",
       write.png.file = FALSE, gui = FALSE)
 
 # classification
-setwd("/Users/noeljohnson_laptop/Dropbox/Mac/Desktop/")
+setwd("~/Desktop")
 
 # try and determine "true" authorship of Galbraith’s The Cuckoo’s Calling 
 # by comparing with with 25 other fantasy novels and thrillers by 4 famous 
@@ -219,7 +219,7 @@ test.set <- freqs[(rownames(freqs) %in% test.texts),]
 # summary(results1)
 # results1$predicted
 
-# perform knn on the Rowling corpus (no sampling)...
+# perform knn on the Rowling corpus...
 results2 <- classify(training.frequencies = training.set,
                      test.frequencies = test.set, mfw.min = 50, mfw.max = 500,
                      mfw.incr = 50, classification.method = "knn", n=3,
@@ -232,7 +232,7 @@ colMeans(results2$cross.validation.summary)
 # rolling classification
 
 # change working directory
-setwd("/Users/noeljohnson_laptop/Dropbox/Teaching/TaD_Sp2023/code/week_4_code/RdlR_for_rolling_classify-master")
+setwd("~/Documents/George Mason/2022-23 Classes/Text as Data/TaD-Spring-2023/code/week_4/RdlR_for_rolling_classify-master")
 
 rolling.classify(write.png.file = TRUE, classification.method = "svm", mfw = 100,
                  training.set.sampling = "normal.sampling", slice.size = 5000,
