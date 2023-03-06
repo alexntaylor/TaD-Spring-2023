@@ -10,7 +10,7 @@
 #----------------------------------------
 
 # set path where our data is stored
-setwd("/Users/noeljohnson_laptop/Dropbox/Teaching/TaD_Sp2023/code/week_5_code")
+setwd("/Users/atay508/Documents/George Mason/2022-23 Classes/Text as Data/TaD-Spring-2023/code/week_5")
 
 # load required libraries
 library(quanteda)
@@ -50,7 +50,7 @@ words <- c("Washington Post", "NYT", "Wall Street Journal",
 # Elements that have alphanumeric characters
 grep("\\w", words, value = T)
 # Elements that have words that are at least 7 characters long
-grep("\\w{7}", words, value = T) 
+grep("\\w{7}", words, value = T)
 # Elements that contain numbers
 grep("\\d", words, value = T) 
 # Elements that contain non-word characters (Including white space)
