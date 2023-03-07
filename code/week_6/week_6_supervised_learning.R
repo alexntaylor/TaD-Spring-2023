@@ -21,7 +21,7 @@ print(seq(0, 1, by=.1)[4], digits=20)
 rm(list = ls())
 
 # set path where our data is stored
-setwd("/Users/noeljohnson_laptop/Dropbox/Teaching/TaD_Sp2023/code/week_6_code")
+setwd("/Users/atay508/Documents/George Mason/2022-23 Classes/Text as Data/TaD-Spring-2023/code/week_6")
 
 # load required libraries
 library(quanteda)
